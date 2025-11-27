@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zotero-mcp"                  # <--- ここを変更
+version = "0.1.0"
+description = "MCP server for Zotero integration"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["zotero", "mcp", "model-context-protocol"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.7.1",
+    "PyPDF2>=3.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/zotero-mcp"
+Repository = "https://github.com/yourusername/zotero-mcp"
+
+[project.scripts]
+zotero-mcp = "zotero_mcp:main"       # <--- コマンド名と参照先パッケージを変更
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
