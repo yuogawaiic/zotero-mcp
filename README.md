@@ -15,7 +15,7 @@ In Zotero's settings (Preferences → Advanced → General), enable:
 
 ## Configuration
 
-Add the following to your MCP client configuration file (e.g., `mcp.json` for Claude Desktop or Cursor):
+Add the following to your MCP client configuration file (e.g., `mcp_config.json` for Antigravity, `mcp.json` for Claude Desktop or Cursor):
 
 ```json
 {
